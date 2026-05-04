@@ -64,6 +64,18 @@ function RootShell({ children }: { children: React.ReactNode }) {
   );
 }
 
+import { Header, Footer } from "@/components/Navigation";
+import { Toaster } from "@/components/ui/sonner";
+
 function RootComponent() {
-  return <Outlet />;
+  return (
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Outlet />
+      </main>
+      <Footer />
+      <Toaster />
+    </div>
+  );
 }
